@@ -1,0 +1,22 @@
+Not final outline, just conceptual. Trying to experiment with Classes, Abstract Classes, and maybe interfaces?
+
+Vehicle (Class, abstract):
+        Make (String, Enum)
+        Model (String, Enum)
+        Weight (Int)
+        Engine (Class)
+    Car(Class, extends Vehicle)
+    Truck(Class, extends Vehicle)
+    Motorcycle(Class, extends Vehicle)
+    
+Engine (Class):
+    Name (String)
+    Type (String)
+    Horse Power (Int)
+
+Raceway (Class)
+    Vehicle 1 (Class)
+    Vehicle 2 (Class)
+    Race (Method)
+
+Main (Class)
