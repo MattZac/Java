@@ -1,6 +1,6 @@
 package carsandclasspractice;
 
-public enum EnumTruck {
+public enum EnumTrucks {
     Syclone("GMC", "Syclone", 3600),
     Lightning("Ford", "SVT-Lightning", 4600),
     Silverado("Chevrolet", "Silverado SS", 5300);
@@ -9,7 +9,7 @@ public enum EnumTruck {
     private final String model;
     private final int weight;
 
-    EnumTruck(String make, String model, int weight) {
+    EnumTrucks(String make, String model, int weight) {
         this.make = make;
         this.model = model;
         this.weight = weight;
