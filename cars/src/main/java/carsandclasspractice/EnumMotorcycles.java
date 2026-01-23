@@ -1,24 +1,27 @@
 package carsandclasspractice;
 
 public enum EnumMotorcycles {
-    Hayabusa("Suzuki", "Hayabusa", 380, 190),
-    GSX("Suzuki", "GSX-R1000", 450, 195),
-    ZX("Kawasaki", "ZX-14R", 600, 210);
+    HAYABUSA("Suzuki", "Hayabusa", 380, 50, EnumEngines.HAYABUSA),
+    GSX("Suzuki", "GSX-R1000", 450, 50, EnumEngines.GSX),
+    ZX("Kawasaki", "ZX-14R", 600, 50, EnumEngines.ZX);
 
     private final String make;
     private final String model;
     private final int weight;
-    private final int hp;
+    private final int grip;
+    private final EnumEngines engine;
 
-    EnumMotorcycles(String make, String model, int weight, int hp) {
+    EnumMotorcycles(String make, String model, int weight, int grip, EnumEngines engine) {
         this.make = make;
         this.model = model;
         this.weight = weight;
-        this.hp = hp;
+        this.grip = grip;
+        this.engine = engine;
     }
 
     public String getMake() {return make;}
     public String getModel() {return model;}
     public int getWeight() {return weight;}
-    public int getHp() {return hp;}
+    public int getGrip() {return grip;}
+    public EnumEngines getEngine() {return engine;}
 }
