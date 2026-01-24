@@ -2,8 +2,8 @@ package carsandclasspractice;
 
 public class Car extends Vehicle {
 
-    public Car(String make, String model, int weight, int grip, Engine engine) {
-        super(make, model, weight, grip, engine);
+    public Car(EnumCars eCar, Engine engine) {
+        super(eCar, engine);
     }
 
     protected void awdUpgrade() {

@@ -2,8 +2,8 @@ package carsandclasspractice;
 
 public class Truck extends Vehicle {
 
-    public Truck(String make, String model, int weight, int grip, Engine engine) {
-        super(make, model, weight, grip, engine);
+    public Truck(EnumTrucks eTruck, Engine engine) {
+        super(eTruck, engine);
     }
 
     protected void awdUpgrade() {

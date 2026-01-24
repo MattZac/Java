@@ -2,17 +2,17 @@ package carsandclasspractice;
 
 public abstract class Vehicle {
 
-    private final String make;
-    private final String model;
-    private int weight;
-    private int grip;
-    private Engine engine;
+    protected final String make;
+    protected final String model;
+    protected int weight;
+    protected int grip;
+    protected Engine engine;
 
-    public Vehicle(String make, String model, int weight, int grip, Engine engine) {
-        this.make = make;
-        this.model = model;
-        this.weight = weight;
-        this.grip = grip;
+    public Vehicle(EnumConnector spec, Engine engine) {
+        this.make = spec.getMake();
+        this.model = spec.getModel();
+        this.weight = spec.getWeight();
+        this.grip = spec.getGrip();
         this.engine = engine;
     }
 

@@ -4,8 +4,8 @@ public class Motorcycle extends Vehicle {
 
     private boolean crashed_status = false;
 
-    public Motorcycle(String make, String model, int weight, int grip, Engine engine) {
-        super(make, model, weight, grip, engine);
+    public Motorcycle(EnumMotorcycles eMotorcycle, Engine engine) {
+        super(eMotorcycle, engine);
     }
 
     //Wheelie Launch: Triples grip but has a 20% chance to crash

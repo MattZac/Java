@@ -9,13 +9,22 @@ public class Engine {
     private final int torque; //lb-ft
     private final EnumForcedInduction fi;
 
-    public Engine(String name, String config, int cylinders, int basehp, int torque, EnumForcedInduction fi) {
-        this.name = name;
-        this.config = config;
-        this.cylinders = cylinders;
-        this.basehp = basehp;
-        this.torque = torque;
-        this.fi = fi;
+    public Engine(EnumEngines eEngine) {
+        this.name = eEngine.getName();
+        this.config = eEngine.getConfig();
+        this.cylinders = eEngine.getCylinders();
+        this.basehp = eEngine.getBaseHp();
+        this.torque = eEngine.getTorque();
+        this.fi = eEngine.getFi();
+    }
+
+    public Engine(EnumMotorcycles eMotorcycle) {
+        this.name = eMotorcycle.getEngine().getName();
+        this.config = eMotorcycle.getEngine().getConfig();
+        this.cylinders = eMotorcycle.getEngine().getCylinders();
+        this.basehp = eMotorcycle.getEngine().getBaseHp();
+        this.torque = eMotorcycle.getEngine().getTorque();
+        this.fi = eMotorcycle.getEngine().getFi();
     }
 
     public String getName() {return name;}

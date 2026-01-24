@@ -1,6 +1,6 @@
 package carsandclasspractice;
 
-public enum EnumMotorcycles {
+public enum EnumMotorcycles implements EnumConnector {
     HAYABUSA("Suzuki", "Hayabusa", 380, 50, EnumEngines.HAYABUSA),
     GSX("Suzuki", "GSX-R1000", 450, 50, EnumEngines.GSX),
     ZX("Kawasaki", "ZX-14R", 600, 50, EnumEngines.ZX);
@@ -19,9 +19,9 @@ public enum EnumMotorcycles {
         this.engine = engine;
     }
 
-    public String getMake() {return make;}
-    public String getModel() {return model;}
-    public int getWeight() {return weight;}
-    public int getGrip() {return grip;}
+    @ Override public String getMake() {return make;}
+    @Override public String getModel() {return model;}
+    @Override public int getWeight() {return weight;}
+    @Override public int getGrip() {return grip;}
     public EnumEngines getEngine() {return engine;}
 }
