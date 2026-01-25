@@ -1,6 +1,6 @@
 package carsandclasspractice;
 
-public enum EnumCars implements EnumConnector {
+public enum EnumCars implements EnumVehicles {
     Supra("Toyota", "Supra-MK5", 3400, 100),
     Demon("Dodge", "Demon", 4300, 100),
     M3("BMW", "G80-M3", 4000, 100);

@@ -1,6 +1,6 @@
 package carsandclasspractice;
 
-public enum EnumMotorcycles implements EnumConnector {
+public enum EnumMotorcycles implements EnumVehicles {
     HAYABUSA("Suzuki", "Hayabusa", 380, 50, EnumEngines.HAYABUSA),
     GSX("Suzuki", "GSX-R1000", 450, 50, EnumEngines.GSX),
     ZX("Kawasaki", "ZX-14R", 600, 50, EnumEngines.ZX);

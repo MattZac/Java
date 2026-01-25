@@ -1,6 +1,6 @@
 package carsandclasspractice;
 
-public enum EnumTrucks implements EnumConnector {
+public enum EnumTrucks implements EnumVehicles {
     Syclone("GMC", "Syclone", 3600, 100),
     Lightning("Ford", "SVT-Lightning", 4600, 100),
     Silverado("Chevrolet", "Silverado SS", 5300, 100);

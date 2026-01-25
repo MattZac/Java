@@ -8,7 +8,7 @@ public abstract class Vehicle {
     protected int grip;
     protected Engine engine;
 
-    public Vehicle(EnumConnector spec, Engine engine) {
+    public Vehicle(EnumVehicles spec, Engine engine) {
         this.make = spec.getMake();
         this.model = spec.getModel();
         this.weight = spec.getWeight();
