@@ -2,8 +2,11 @@ package carsandclasspractice;
 
 public enum EnumEngines {
     //Car and Truck Engine Options
-    RB("RB26DETT", "Inline", 6, 300, 260, EnumForcedInduction.TWINTURBO),
-    JZ("2JZ", "Inline", 6, 320, 330, EnumForcedInduction.TWINTURBO),
+    // Used RB26DETT variant with factory twin turbo setup
+    RB("RB26DETT", "Inline", 6, 180, 260, EnumForcedInduction.TWINTURBO),
+    // Used 2JZ-GTE variant with factory twin turbo setup
+    JZ("2JZ", "Inline", 6, 220, 330, EnumForcedInduction.TWINTURBO),
+    // Used standard LS1 variant
     LS("LS1", "V", 8, 350, 365, EnumForcedInduction.NA),
 
     //Motorcycle Engine Options

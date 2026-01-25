@@ -2,8 +2,8 @@ package carsandclasspractice;
 
 public enum EnumForcedInduction {
     NA("Naturally Aspirated", 0),
-    TWINTURBO("Twin Turbo", 200),
-    SUPERCHARGER("Supercharger", 500),
+    TWINTURBO("Twin Turbo", 100),
+    SUPERCHARGER("Supercharger", 300),
     QUADTURBO("Quad Turbo", 800);
 
     private final String type;
