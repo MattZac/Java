@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Engine Name: " + moto1.getEngine().getName());
         System.out.println("Horsepower: " + moto1.getEngine().getTotalHp());
 
-        Car car1 = new Car(EnumCars.M3, new Engine(EnumEngines.LS));
+        Car car1 = new Car(EnumCars.M3, new Engine(EnumEngines.JZ));
         System.out.println("");
         System.out.println("Car Make: " + car1.getMake());
         System.out.println("Car Model: " + car1.getModel());
