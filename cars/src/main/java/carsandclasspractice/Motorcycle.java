@@ -1,5 +1,7 @@
 package carsandclasspractice;
 
+import carsandclasspractice.Enums.EnumMotorcycles;
+
 public class Motorcycle extends Vehicle {
 
     private boolean crashed_status = false;

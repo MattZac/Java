@@ -1,6 +1,6 @@
 package carsandclasspractice;
 
-public interface EnumVehicles {
+public interface EnumInterface {
     String getMake();
     String getModel();
     int getWeight();

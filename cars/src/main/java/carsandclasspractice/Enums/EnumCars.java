@@ -1,14 +1,16 @@
-package carsandclasspractice;
+package carsandclasspractice.Enums;
 
-public enum EnumCars implements EnumVehicles {
+import carsandclasspractice.EnumInterface;
+
+public enum EnumCars implements EnumInterface {
     Supra("Toyota", "Supra-MK5", 3400, 100),
     Demon("Dodge", "Demon", 4300, 100),
     M3("BMW", "G80-M3", 4000, 100);
 
-    private final String make;
-    private final String model;
-    private final int weight;
-    private final int grip;
+    protected final String make;
+    protected final String model;
+    protected final int weight;
+    protected final int grip;
 
     EnumCars(String make, String model, int weight, int grip) {
         this.make = make;

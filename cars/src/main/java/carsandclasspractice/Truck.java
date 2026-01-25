@@ -1,5 +1,7 @@
 package carsandclasspractice;
 
+import carsandclasspractice.Enums.EnumTrucks;
+
 public class Truck extends Vehicle {
 
     public Truck(EnumTrucks eTruck, Engine engine) {

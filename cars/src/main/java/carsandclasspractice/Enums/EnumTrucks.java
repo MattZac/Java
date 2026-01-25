@@ -1,14 +1,16 @@
-package carsandclasspractice;
+package carsandclasspractice.Enums;
 
-public enum EnumTrucks implements EnumVehicles {
+import carsandclasspractice.EnumInterface;
+
+public enum EnumTrucks implements EnumInterface {
     Syclone("GMC", "Syclone", 3600, 100),
     Lightning("Ford", "SVT-Lightning", 4600, 100),
     Silverado("Chevrolet", "Silverado SS", 5300, 100);
 
-    private final String make;
-    private final String model;
-    private final int weight;
-    private final int grip;
+    protected final String make;
+    protected final String model;
+    protected final int weight;
+    protected final int grip;
 
     EnumTrucks(String make, String model, int weight, int grip) {
         this.make = make;

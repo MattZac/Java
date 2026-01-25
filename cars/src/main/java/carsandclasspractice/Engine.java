@@ -1,5 +1,9 @@
 package carsandclasspractice;
 
+import carsandclasspractice.Enums.EnumEngines;
+import carsandclasspractice.Enums.EnumForcedInduction;
+import carsandclasspractice.Enums.EnumMotorcycles;
+
 public class Engine {
 
     private final String name;

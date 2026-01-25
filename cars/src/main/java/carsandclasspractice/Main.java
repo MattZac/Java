@@ -1,5 +1,9 @@
 package carsandclasspractice;
 
+import carsandclasspractice.Enums.EnumCars;
+import carsandclasspractice.Enums.EnumEngines;
+import carsandclasspractice.Enums.EnumMotorcycles;
+
 public class Main {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package carsandclasspractice;
+package carsandclasspractice.Enums;
 
 public enum EnumForcedInduction {
     NA("Naturally Aspirated", 0),
@@ -6,8 +6,8 @@ public enum EnumForcedInduction {
     SUPERCHARGER("Supercharger", 300),
     QUADTURBO("Quad Turbo", 800);
 
-    private final String type;
-    private final int hpAdd;
+    protected final String type;
+    protected final int hpAdd;
 
     EnumForcedInduction(String type, int hpAdd) {
         this.type = type;

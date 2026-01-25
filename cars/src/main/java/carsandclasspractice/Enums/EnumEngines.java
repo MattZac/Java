@@ -1,4 +1,4 @@
-package carsandclasspractice;
+package carsandclasspractice.Enums;
 
 public enum EnumEngines {
     //Car and Truck Engine Options
@@ -14,12 +14,12 @@ public enum EnumEngines {
     GSX("GSX-R1000 Engine", "Inline", 4, 200, 90, EnumForcedInduction.NA),
     ZX("ZX-14R Engine", "Inline", 4, 200, 115, EnumForcedInduction.NA);
 
-    private final String name;
-    private final String config;
-    private final int cylinders;
-    private final int basehp;
-    private final int torque; //lb-ft
-    private final EnumForcedInduction fi;
+    protected final String name;
+    protected final String config;
+    protected final int cylinders;
+    protected final int basehp;
+    protected final int torque; //lb-ft
+    protected final EnumForcedInduction fi;
 
     EnumEngines(String name, String config, int cylinders, int basehp, int torque, EnumForcedInduction fi) {
         this.name = name;
