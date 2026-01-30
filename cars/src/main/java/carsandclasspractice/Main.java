@@ -2,23 +2,17 @@ package carsandclasspractice;
 
 import carsandclasspractice.Enums.EnumCars;
 import carsandclasspractice.Enums.EnumEngines;
-import carsandclasspractice.Enums.EnumMotorcycles;
+import carsandclasspractice.Enums.EnumTrucks;
+
 
 public class Main {
 
     public static void main(String[] args) {
-        Motorcycle moto1 = new Motorcycle(EnumMotorcycles.HAYABUSA, new Engine(EnumMotorcycles.HAYABUSA));
-        System.out.println("");
-        System.out.println("Motorcycle Make: " + moto1.getMake());
-        System.out.println("Motorcycle Model: " + moto1.getModel());
-        System.out.println("Engine Name: " + moto1.getEngine().getName());
-        System.out.println("Horsepower: " + moto1.getEngine().getTotalHp());
+        Truck truck1 = new Truck(EnumTrucks.Silverado, new Engine(EnumEngines.LS));
 
-        Car car1 = new Car(EnumCars.M3, new Engine(EnumEngines.JZ));
-        System.out.println("");
-        System.out.println("Car Make: " + car1.getMake());
-        System.out.println("Car Model: " + car1.getModel());
-        System.out.println("Engine Name: " + car1.getEngine().getName());
-        System.out.println("Horsepower: " + car1.getEngine().getTotalHp());
+        Car car1 = new Car(EnumCars.M4, new Engine(EnumEngines.JZ));
+
+        Raceway raceway = new Raceway(car1, truck1);
+        raceway.race(car1, truck1);
     }
 }

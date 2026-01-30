@@ -5,7 +5,7 @@ import carsandclasspractice.EnumInterface;
 public enum EnumCars implements EnumInterface {
     Supra("Toyota", "Supra-MK5", 3400, 100),
     Demon("Dodge", "Demon", 4300, 100),
-    M3("BMW", "G80-M3", 4000, 100);
+    M4("BMW GT3 Edition", "G80-M3", 4000, 100);
 
     protected final String make;
     protected final String model;
