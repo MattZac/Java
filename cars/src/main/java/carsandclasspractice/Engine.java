@@ -11,7 +11,7 @@ public class Engine {
     private final int cylinders;
     private final int basehp;
     private final int torque; //lb-ft
-    private final EnumForcedInduction fi;
+    private EnumForcedInduction fi;
 
     public Engine(EnumEngines eEngine) {
         this.name = eEngine.getName();
@@ -37,6 +37,7 @@ public class Engine {
     public int getBaseHp() {return basehp;}
     public int getTorque() {return torque;}
     public EnumForcedInduction getFi() {return fi;}
+    public void setFi(EnumForcedInduction fi) {this.fi = fi;}
 
     public int getTotalHp() {
         return basehp + fi.getHpAdd();
