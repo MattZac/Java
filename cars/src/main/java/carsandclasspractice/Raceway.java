@@ -12,9 +12,9 @@ public class Raceway {
         this.vehicle2 = vehicle2;
     }
 
-    // ---------------------------------------------------------
+    // ----------------------------------------------
     // NEW PHYSICS CALCULATIONS, HEAVY USE OF AI HERE
-    // ---------------------------------------------------------
+    // ----------------------------------------------
     
     private double calculateAcceleration(Vehicle v) {
         // Newton's Law: F = ma  ->  a = F / m
@@ -81,7 +81,7 @@ public class Raceway {
         double v2TopSpeed = calculateTopSpeed(v2);
     
         // Gap to clear console, a poor man's ctrl+l lol
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 50; i++) {
             System.out.println();
         }
         
