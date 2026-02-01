@@ -32,18 +32,18 @@ public class Main {
                                                                                      
         """);
 
-        System.out.println("\nWelcome racers! Player 1, please select your vehicle to begin:\n");
-        vehicleMenu(p1, scanner);
+        while (true) {
+            System.out.println("\nWelcome racers! Player 1, please select your vehicle to begin:\n");
+            vehicleMenu(p1, scanner);
 
-        System.out.println("\nPlayer 2, please select your vehicle to begin:\n");
-        vehicleMenu(p2, scanner);
+            System.out.println("\nPlayer 2, please select your vehicle to begin:\n");
+            vehicleMenu(p2, scanner);
 
-        scanner.close();
+            // Play starting animation
 
-        // Play starting animation
-
-        Raceway raceway = new Raceway(p1.getVehicle(), p2.getVehicle());
-        raceway.race(p1.getVehicle(), p2.getVehicle());
+            Raceway raceway = new Raceway(p1.getVehicle(), p2.getVehicle());
+            raceway.race(p1.getVehicle(), p2.getVehicle());
+        }
     }
 
     public static void vehicleMenu(Player p, Scanner scanner) {
@@ -51,6 +51,7 @@ public class Main {
         System.out.println("1. Car");
         System.out.println("2. Truck");
         System.out.println("3. Motorcycle");
+        System.out.println("4. Exit");
         System.out.println();
 
         int choice = scanner.nextInt();
@@ -58,6 +59,10 @@ public class Main {
             case 1 -> carMenu(p, scanner);
             case 2 -> truckMenu(p, scanner);
             case 3 -> motorcycleMenu(p, scanner);
+            case 4 -> {
+                System.out.println("Exiting the game. Goodbye!");
+                System.exit(0);
+            }
             default -> {
                 System.out.println("Invalid choice! Please try again.");
                 vehicleMenu(p, scanner);
@@ -196,27 +201,102 @@ public class Main {
         }
         System.out.println();
 
+        Vehicle vehicle = p.getVehicle();
+
         int fiChoice = scanner.nextInt();
-        switch (fiChoice) {
-            case 1 -> {
-                p.getVehicle().getEngine().setFi(FIOptions[0]);
-                System.out.println("You selected: " + FIOptions[0].getType());
-            }
-            case 2 -> {
-                p.getVehicle().getEngine().setFi(FIOptions[1]);
-                System.out.println("You selected: " + FIOptions[1].getType());
-            }
-            case 3 -> {
-                p.getVehicle().getEngine().setFi(FIOptions[2]);
-                System.out.println("You selected: " + FIOptions[2].getType());
-            }
-            case 4 -> {
-                p.getVehicle().getEngine().setFi(FIOptions[3]);
-                System.out.println("You selected: " + FIOptions[3].getType());
+        switch (vehicle) {
+            case Motorcycle motorcycle -> {
+                powerUpMenu(p, scanner);
             }
             default -> {
+                switch (fiChoice) {
+                    case 1 -> {
+                        p.getVehicle().getEngine().setFi(FIOptions[0]);
+                        System.out.println("You selected: " + FIOptions[0].getType());
+                        awdMenu(p, scanner);
+                    }
+                    case 2 -> {
+                        p.getVehicle().getEngine().setFi(FIOptions[1]);
+                        System.out.println("You selected: " + FIOptions[1].getType());
+                        awdMenu(p, scanner);
+                    }
+                    case 3 -> {
+                        p.getVehicle().getEngine().setFi(FIOptions[2]);
+                        System.out.println("You selected: " + FIOptions[2].getType());
+                        awdMenu(p, scanner);
+                    }
+                    case 4 -> {
+                        p.getVehicle().getEngine().setFi(FIOptions[3]);
+                        System.out.println("You selected: " + FIOptions[3].getType());
+                        awdMenu(p, scanner);
+                    }
+                    default -> {
+                        System.out.println("Invalid choice! Please try again.");
+                        fiMenu(p, scanner);
+                    }
+                }
+            }
+        }
+    }
+
+    public static void awdMenu(Player p, Scanner scanner) {
+        System.out.println("Upgrade to All-Wheel Drive?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        System.out.println();
+
+        Vehicle vehicle = p.getVehicle();
+
+        int awdChoice = scanner.nextInt();
+        switch (awdChoice) {
+            case 1 -> {
+                switch (vehicle) {
+                    case Car car -> { 
+                        car.awdUpgrade();
+                        System.out.println("All-Wheel Drive upgrade activated!");
+                        powerUpMenu(p, scanner);
+                    }
+                    case Truck truck -> { 
+                        truck.awdUpgrade();
+                        System.out.println("All-Wheel Drive upgrade activated!");
+                        powerUpMenu(p, scanner);
+                    }
+                    default -> {}
+                }
+            }
+            case 2 -> System.out.println("All-Wheel Drive upgrade not activated.");
+            default -> {
                 System.out.println("Invalid choice! Please try again.");
-                fiMenu(p, scanner);
+                awdMenu(p, scanner);
+            }
+        }
+    }
+
+    public static void powerUpMenu(Player p, Scanner scanner) {
+        System.out.println("Activate Special Ability?");
+
+        Vehicle vehicle = p.getVehicle();
+
+        switch (vehicle) {
+            case Car car -> System.out.println("[Car] Special Ability: Aero Kit - Reduces weight by 10% and increases grip by 50 points.");
+            case Truck truck -> System.out.println("[Truck] Special Ability: Bed Weight - Adds 500 lbs but doubles current grip (Also affects AWD-Upgrade).");
+            case Motorcycle motorcycle -> System.out.println("[Motorcycle] Special Ability: Wheelie Launch - Triples grip but has a 20% chance to crash.");
+            default -> System.out.println("Unknown vehicle type.");
+        }
+        
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        System.out.println();
+
+        int powerUPChoice = scanner.nextInt();
+        switch (powerUPChoice) {
+            case 1 -> {
+                p.getVehicle().specialAbility();
+            }
+            case 2 -> System.out.println("Special Ability not activated.");
+            default -> {
+                System.out.println("Invalid choice! Please try again.");
+                powerUpMenu(p, scanner);
             }
         }
     }
