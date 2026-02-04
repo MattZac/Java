@@ -205,7 +205,7 @@ public class Main {
 
         int fiChoice = scanner.nextInt();
         switch (vehicle) {
-            case Motorcycle motorcycle -> {
+            case Motorcycle _ -> {
                 powerUpMenu(p, scanner);
             }
             default -> {
@@ -278,9 +278,9 @@ public class Main {
         Vehicle vehicle = p.getVehicle();
 
         switch (vehicle) {
-            case Car car -> System.out.println("[Car] Special Ability: Aero Kit - Reduces weight by 10% and increases grip by 50 points.");
-            case Truck truck -> System.out.println("[Truck] Special Ability: Bed Weight - Adds 500 lbs but doubles current grip (Also affects AWD-Upgrade).");
-            case Motorcycle motorcycle -> System.out.println("[Motorcycle] Special Ability: Wheelie Launch - Triples grip but has a 20% chance to crash.");
+            case Car _ -> System.out.println("[Car] Special Ability: Aero Kit - Reduces weight by 10% and increases grip by 50 points.");
+            case Truck _ -> System.out.println("[Truck] Special Ability: Bed Weight - Adds 500 lbs but doubles current grip (Also affects AWD-Upgrade).");
+            case Motorcycle _ -> System.out.println("[Motorcycle] Special Ability: Wheelie Launch - Triples grip but has a 20% chance to crash.");
             default -> System.out.println("Unknown vehicle type.");
         }
         
