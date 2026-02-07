@@ -39,8 +39,6 @@ public class Main {
             System.out.println("\nPlayer 2, please select your vehicle to begin:\n");
             vehicleMenu(p2, scanner);
 
-            // Play starting animation
-
             Raceway raceway = new Raceway(p1.getVehicle(), p2.getVehicle());
             raceway.race(p1.getVehicle(), p2.getVehicle());
         }
