@@ -14,8 +14,8 @@ public class Motorcycle extends Vehicle {
     @Override
     protected void specialAbility() {
         super.setGrip(getGrip() * 3);
-        // Simulate a 20% chance to crash
-        if (Math.random() < 0.2) {
+        // Simulate a 10% chance to crash
+        if (Math.random() < 0.1) {
             super.setGrip(1); // Crash results in near 0 grip
             crashed_status = true;
         }
